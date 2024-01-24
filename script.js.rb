@@ -20,6 +20,7 @@ end
 @state = State.new
 
 Document.ready? do
+  div(parent: '#app-container') {
     div {
         label('Name: ', for: 'name-field')
         @name_input = input(type: 'text', id: 'name-field', required: true, autofocus: true) {
@@ -34,4 +35,5 @@ Document.ready? do
           $$.alert("Hello, #{@state.name}!")
         end
     }
+  }
 end

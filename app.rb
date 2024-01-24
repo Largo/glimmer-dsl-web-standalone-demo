@@ -9,4 +9,12 @@ builder = Opal::Builder.new
 builder.build('glimmer-dsl-web')
 builder.build("./script.js.rb")
 FileUtils.mkdir_p "build"
-File.binwrite "build/build.js", builder.to_s
+output = builder.to_s
+
+#require "execjs"
+#require 'terser'
+#ExecJS.runtime = ExecJS::Runtimes::Node
+#minified_output = Terser.new.compile(output)
+#File.binwrite "build/build.js", minified_output
+
+File.binwrite "build/build.js", output

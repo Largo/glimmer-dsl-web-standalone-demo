@@ -11,3 +11,5 @@ gem "opal-jquery", "~> 0.5.1"
 gem "listen", "~> 3.8"
 
 gem "fileutils", "~> 1.7"
+
+gem "terser", "~> 1.2"
